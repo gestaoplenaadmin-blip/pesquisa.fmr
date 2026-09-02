@@ -196,10 +196,9 @@
     </div>
 
     <div class="pergunta">
-      <div class="rotulo">EMPRESA</div>
-      <h2>Qual o nome da sua empresa?</h2>
-      <input type="text" id="campoEmpresa" placeholder="Digite o nome da empresa" required>
-      <div class="erro" id="erroEmpresa">Por favor, informe o nome da empresa.</div>
+      <div class="rotulo">EMPRESA - OPCIONAL</div>
+      <h2>Em qual empresa você trabalha?</h2>
+      <input type="text" id="campoEmpresa" placeholder="Digite o nome da empresa (opcional)">
     </div>
 
     <div class="pergunta">
@@ -298,9 +297,6 @@
 
     const empresa = document.getElementById('campoEmpresa').value.trim();
     let valido = true;
-
-    if(!empresa){ document.getElementById('erroEmpresa').style.display = 'block'; valido = false; }
-    else { document.getElementById('erroEmpresa').style.display = 'none'; }
 
     if(notaNps === null){ document.getElementById('erroNps').style.display = 'block'; valido = false; }
     if(notaEstrelas === 0){ document.getElementById('erroEstrelas').style.display = 'block'; valido = false; }
